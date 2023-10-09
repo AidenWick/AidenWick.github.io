@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=AR+One+Sans&family=Lora:wght@700&display=swap');
+
+.sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  
+  }
+  body {
+    background-color: #C4FFE5;
+    font-family: 'AR One Sans', sans-serif;
+    font-size: 16px;
+  }
+  p {
+    color: rgb(10,10,10);
+    line-height: 1.8em;
+    text-indent: 50px;
+  }
+
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  h1, 
+  h2, 
+  h3 {
+    font-family: 'Lora', serif;
+    font-weight: 700;
+  }
+  h1{
+    font-size: 1.7em;
+  } 
+  h2{
+    font-size: 1.3em;
+  } 
+  h3 {
+    font-size: 1.2em;
+  }
+
+
+  nav ul li { /*items inside nav */
+    list-style: none;
+    font-size: 1.8em;
+  }
+  nav ul li a:link {
+    color: white;
+  }
+  
+  nav ul li a:visited {
+    color: white;
+  }
+  
+  nav ul li a:hover {
+    color: black;
+    background: white;
+  }
+  
+  nav ul li a:active {
+    color: yellow;
+  }
