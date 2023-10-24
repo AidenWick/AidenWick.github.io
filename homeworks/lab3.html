@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3</title>
+    <link rel="stylesheet" href="../css/lab3.css">
+
+</head>
+
+<body>
+
+    <header id="header">
+        <h1>Aiden Wick's Portal!</h1>
+        
+    <nav>
+        <h2>Main Menu</h2>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../homework-home.html">Homework</a></li>
+            <li><a href="#">Contact</a></li>
+
+        </ul>
+    </nav>
+    </header>
+
+    <section>
+        <table class="center">
+            <h2>Past 5 F1 Champions</h2>
+            <thead>
+              <tr>
+                <th scope="col">Year</span></th>
+                <th scope="col">Driver</th>
+                <th scope="col">Team</th>
+                <th scope="col">Age</th>
+                <th scope="col">Country of Origin</th>
+                
+              </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                  <td>2023</td>
+                  <td>Max Verstappen</td>
+                  <td>Redbull</td>
+                  <td>26</td>
+                  <td>Netherlands</td>
+                </tr>
+                <tr>
+                    <td>2022</td>
+                    <td>Max Verstappen</td>
+                    <td>Redbull</td>
+                    <td>25</td>
+                    <td>Netherlands</td>
+                </tr>
+                <tr>
+                    <td>2021</td>
+                    <td>Max Verstappen</td>
+                    <td>Redbull</td>
+                    <td>24</td>
+                    <td>Netherlands</td>
+                </tr>
+                <tr>
+                    <td>2020</td>
+                    <td>Lewis Hamilton</td>
+                    <td>Mercedes-AMG</td>
+                    <td>35</td>
+                    <td>United Kingdom</td>
+                </tr>
+                <tr>
+                    <td>2021</td>
+                    <td>Lewis Hamilton</td>
+                    <td>Mercedes-AMG</td>
+                    <td>34</td>
+                    <td>United Kingdom</td>
+                </tr>
+              </tbody>
+        </table>
+
+
+
+        <form id="myform" method="post">
+            <fieldset>
+                <legend>    <span aria-hidden=”true” class="material-icons">star</span> Who is your favorite F1 driver! <span aria-hidden=”true” class="material-icons">star</span></legend>
+
+                <label for="name">
+                    what is your name? *required
+                    <input type="text" id="name" required>
+                </label>
+
+                <label for="your-email">
+                    what is your email?
+                    <input type="email" id="your-email" required>
+                </label>
+
+                <label for="driver">
+                    Who is your favorite driver?
+                    <input type="text" id="driver" pattern="[a-zA-Z]+ [a-zA-Z]+" required>
+                    <ul class="inputRequirements">
+                        <li>Please enter a first name, seperated by a space, followed by last name</li>
+                    </ul>
+                </label>
+
+                <label for="age">
+                    how old are you?
+                    <input type="number" id="age" placeholder="35">
+                </label>
+
+                    <input type="submit">
+            </fieldset>
+        </form>
+    </section>
+
+
+</body>
+
+
+</html>
