@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=AR+One+Sans&family=Lora:wght@700&display=swap');
+
+/*NAVIGATION CSS*/
+
+nav ul {
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+    white-space: nowrap;
+}
+
+nav li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav a {
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none; /* Moved text-decoration here */
+}
+
+nav {
+    text-align: center;
+    padding: 20px 0;
+    grid-area: nav;
+    background-color: transparent;
+    border-bottom: none;
+    min-width: 100px;
+    white-space: nowrap;
+    border-left: none;
+    border-right: none;
+    background-color: #BABDBF;
+} 
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/*HEADER CSS */
+    header {
+        font-family: sans-serif;
+        position: top;
+        top: 0;
+        left: 0;
+        text-align: center;
+        background-color: #F2F2F2;
+        grid-area: header;
+    text-align: center;
+    border: none; 
+    border-bottom: none;
+    border-top: none;
+
+
+    }
+    h1, 
+    h2, 
+    h3 {
+      font-family: 'Lora', serif;
+      font-weight: 700;
+    }
+    h1{
+      font-size: 1.7em;
+    } 
+    h2{
+      font-size: 1.3em;
+    } 
+    h3 {
+      font-size: 1.2em;
+    }
+
+/*BODY CSS*/
+    body {
+        font-family: 'AR One Sans', sans-serif;
+        font-size: 17px;
+        display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    min-height: 100vh;
+    margin: 0;
+    border-left: 20vw solid #F2EBDC; /* Add border to the left */
+    border-right: 20vw solid #F2EBDC;
+    line-height: 1.5;
+    }
+
+
+    
+
+    
+    .main {
+        grid-area: main;
+        padding: 10px;
+        border-left: none;
+        border-right: none;
+        background-color: #F2F2F2;
+    }
+    
+    figure {
+        text-align: center;
+    }
+    
+    figure img {
+        display: block;
+        margin: 0 auto;
+        max-width: 600px; /* Ensures the image is responsive and won't exceed its container width */
+        height: auto; /* Maintains the image's aspect ratio */
+    }
+    
+    figcaption {
+        margin-top: 10px; /* Add some space between the image and the caption */
+    }
+    
+    .footer {
+        grid-area: footer;
+        background-color: #BABDBF;
+        color: black;
+        padding: 10px;
+        border: none; 
+        min-height: 50px;
+        text-align: center;
+        font-size: 12px;
+
+    }
+    
+    @media screen and (max-width: 800px) {
+        body {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-template-areas:
+                "header"
+                "nav"
+                "main"
+                "aside1"
+                "aside2"
+                "footer";
+                border: none;
+        }
+        .nav {
+            margin: 0 35%;
+        }
+        .nav-list{
+            display: inline-block;
+        }
+    
+
+    }
