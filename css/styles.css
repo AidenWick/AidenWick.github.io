@@ -1,86 +1,325 @@
 @import url('https://fonts.googleapis.com/css2?family=AR+One+Sans&family=Lora:wght@700&display=swap');
+  
+@media screen and (min-width: 801px) {
+        /*NAVIGATION CSS*/
 
-/*NAVIGATION CSS*/
+    nav ul {
+        list-style-type: none;
+        padding: 0;
 
-nav ul {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Adjust based on the number of menu items */
+        justify-content: center;
+        text-align: center;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    nav li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    nav a {
+        color: black;
+        font-weight: bold;
+        font-size: 16px;
+        text-decoration: none; /* Moved text-decoration here */
+    }
+
+    nav {
+        text-align: center;
+        padding: 20px 0;
+        grid-area: nav;
+        background-color: transparent;
+        border-bottom: none;
+        min-width: 100px;
+        white-space: nowrap;
+        border-left: none;
+        border-right: none;
+        background-color: #B0E2FF;
+    } 
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+
+    
+    nav li {
+        position: relative;
+    }
+    
+    nav a {
+        color: black;
+        font-weight: bold;
+        font-size: 16px;
+        text-decoration: none;
+    }
+    
+    nav ul ul {
+        display: none;
+        position: absolute;
+        left: 0;
+        margin-left: -50px; /* Moved 25% to the left */
+        background-color: #e4efe9;
+        width: 200px;
+        z-index: 2; /* Ensure the dropdown stays on top */
+    }
+    
+    nav ul li:hover > ul {
+        display: block;
+    }
+    
+    nav ul ul li {
+        display: block;
+        text-align: center;
+    }
+    
+    nav ul ul a {
+        font-size: 14px;
+    }
+
+
+    /*HEADER CSS */
+        header {
+            font-family: sans-serif;
+            position: top;
+            top: 0;
+            left: 0;
+            text-align: center;
+            background-color: #E3F5FF;
+            grid-area: header;
+        text-align: center;
+        border: none; 
+        border-bottom: none;
+        border-top: none;
+
+
+        }
+        h1, 
+        h2, 
+        h3,
+        h4 {
+        font-family: 'Lora', serif;
+        font-weight: 700;
+        padding: 0 10px;
+        }
+        h1{
+        font-size: 1.7em;
+        } 
+        h2{
+        font-size: 1.3em;
+        } 
+        h3 {
+        font-size: 1.2em;
+        }
+        h4 {
+            font-size: 1.05em;
+        }
+
+    /*BODY CSS*/
+        body {
+            font-family: 'AR One Sans', sans-serif;
+            font-size: 17px;
+            display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+        min-height: 100vh;
+        margin: 0;
+        border-left: 20vw solid #6BACD1; /* Add border to the left */
+        border-right: 20vw solid #6BACD1;
+        line-height: 1.5;
+        background-color: #E3F5FF;
+        }
+
+
+        
+
+        
+        .main {
+            grid-area: main;
+            padding: 10px;
+            border-left: none;
+            border-right: none;
+            background-color: #4682b4;
+        }
+        
+        figure {
+            text-align: center;
+        }
+        
+        figure img {
+            display: block;
+            margin: 0 auto;
+            max-width: 600px; /* Ensures the image is responsive and won't exceed its container width */
+            height: auto; /* Maintains the image's aspect ratio */
+        }
+        
+        figcaption {
+            margin-top: 10px; /* Add some space between the image and the caption */
+        }
+        
+        .footer {
+            grid-area: footer;
+            background-color: #4682b4;
+            color: black;
+            padding: 10px;
+            border: none; 
+            min-height: 50px;
+            text-align: center;
+            font-size: 12px;
+
+        }
+        p {
+            padding: 0 10px;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+
+    /*NAV*/
+
+    nav ul {
+        text-align: center;
+        list-style-type: none;
+        padding: 0;
+        white-space: nowrap;
+    }
+
+    nav li {
+        margin-bottom: 15px; /* Add margin between nav items */
+
+    }
+
+    nav a {
+        color: black;
+        font-weight: bold;
+        font-size: 16px;
+        text-decoration: none; /* Moved text-decoration here */
+    }
+
+    nav {
+        text-align: center;
+        grid-area: nav;
+        background-color: transparent;
+        border: none;
+        background-color: #CCFFCC;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    } 
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    header {
+        font-family: sans-serif;
+        position: top;
+        text-align: center;
+        background-color: #F5FFFA;
+        grid-area: header;
     text-align: center;
-    list-style-type: none;
-    padding: 0;
-    margin: 0 25%;
-    max-width: 800px;
-}
+    border: none; 
+    }
 
-nav li {
-    position: relative;
-}
 
-nav a {
-    color: black;
-    font-weight: bold;
-    font-size: 16px;
-    text-decoration: none;
-}
+    nav ul ul {
+        display: none;
+    }
+    
+    nav ul li:hover > ul {
+        display: none;
+    }
+    
+    nav ul ul li {
+        display: none;
+    }
+    
+    nav ul ul a {
+        display: none;
+    }
+    /*NAV*/
 
-nav ul ul {
-    display: none;
-    position: absolute;
-    left: 0;
-    margin-left: 0; /* Moved 25% to the left */
-    background-color: darkgray;
-    width: 200px;
-    z-index: 2; /* Ensure the dropdown stays on top */
-}
 
-nav ul li:hover > ul {
-    display: block;
-}
+    /*MAIN*/
+    .main {
+        grid-area: main;
+        padding: 10px;
+        border-left: none;
+        border-right: none;
+        background-color: #7b68ee;
+        border: none;
+    }
 
-nav ul ul li {
-    display: block;
-    text-align: center;
-}
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "footer";
+        border: none;
+        line-height: 1.2;
+        margin: none;
+        padding: none;
+    }
+    body { margin: 0;}
+    /*MAIN*/
 
-nav ul ul a {
-    font-size: 14px;
-}
+    /*HEADERS*/
+        h1, 
+        h2, 
+        h3,
+        h4 {
+        font-family: 'Lora', serif;
+        font-weight: 700;
+        padding: 0 10px;
+        }
+        h1{
+        font-size: 1.7em;
+        } 
+        h2{
+        font-size: 1.3em;
+        } 
+        h3 {
+        font-size: 1.2em;
+        }
+        h4 {
+            font-size: 1.05em;
+        }
+    /*HEADERS*/
 
-/*HEADER CSS */
+    /*EXTRA*/
+    p {
+        padding: 0 10px;
+        max-width: 100%;
+    }
 
-header {
-    font-family: sans-serif;
-    position: top;
-    top: 0;
-    left: 0;
-    text-align: center;
-    padding: 10px 20px;
-    background-color: lightgray;
-}
+    figure img {
+        max-width: 60%; /* Adjust the image width as needed */
+        display: block;
+        margin: 0 auto;
+        height: auto; /* Maintains the image's aspect ratio */
+    }
 
-h1, h2, h3 {
-    font-family: 'Lora', serif;
-    font-weight: 700;
-}
+    .footer {
+        grid-area: footer;
+        background-color: #CCFFCC;
+        color: black;
+        padding: 10px;
+        border: none; 
+        min-height: 50px;
+        text-align: center;
+        font-size: 12px;
 
-h1 {
-    font-size: 1.7em;
-}
-
-h2 {
-    font-size: 1.3em;
-}
-
-h3 {
-    font-size: 1.2em;
-}
-
-/*BODY CSS*/
-
-body {
-    text-align: center;
-    font-family: 'AR One Sans', sans-serif;
-    font-size: 16px;
+    }
+    /*EXTRA*/
 }
 
 .links-section {
@@ -89,8 +328,6 @@ body {
 }
 
 .links-section ul {
-    padding: 0;
-    list-style-type: none;
 }
 
 .links-section li {
@@ -99,7 +336,6 @@ body {
 
 .links-section a {
     color: black;
-    text-decoration: none;
 }
 
 .content {
@@ -136,3 +372,7 @@ body {
     width: 100%;
     max-width: 100%;
 }
+
+
+
+
